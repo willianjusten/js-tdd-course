@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch"
   },
   "repository": {
     "type": "git",
@@ -24,11 +25,13 @@
   },
   "homepage": "https://github.com/willianjusten/js-tdd-course#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "husky": "^0.11.9"
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0"
   }
 }
