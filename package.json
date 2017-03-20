@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
   },
   "repository": {
     "type": "git",
