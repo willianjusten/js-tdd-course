@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/willianjusten/js-tdd-course#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^12.0.0",
